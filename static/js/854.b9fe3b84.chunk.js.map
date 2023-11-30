@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/854.b9fe3b84.chunk.js","mappings":"gIAIA,UAJe,SAAAA,GACb,OAAOC,EAAAA,EAAAA,KAAA,MAAAC,SAAI,UACb,C","sources":["components/Loader/Loader.jsx"],"sourcesContent":["const Loader = params => {\n  return <h1>Loader</h1>;\n};\n\nexport default Loader;\n"],"names":["params","_jsx","children"],"sourceRoot":""}
