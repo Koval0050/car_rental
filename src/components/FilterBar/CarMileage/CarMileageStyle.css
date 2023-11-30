@@ -1,0 +1,26 @@
+.inputsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputFrom,
+.inputTo {
+  width: 160px;
+  padding: 14px 24px;
+  border: 1px solid;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: calc(20 / 18);
+  background-color: rgba(247, 247, 251, 1);
+  border-color: rgba(247, 247, 251, 1);
+}
+
+.inputFrom {
+  border-radius: 14px 0 0 14px;
+  border-right: 1px solid rgba(189, 189, 189, 0.881);
+}
+.inputTo {
+  border-radius: 0 14px 14px 0;
+}

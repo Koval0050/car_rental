@@ -12,3 +12,24 @@ li {
   margin: 0;
   display: block;
 }
+* {
+  box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('./fonts/Manrope-Bold.ttf') format('ttf'),
+    url('./fonts/Manrope-ExtraBold.ttf') format('ttf'),
+    url('./fonts/Manrope-ExtraLight.ttf') format('ttf'),
+    url('./fonts/Manrope-Light.ttf') format('ttf'),
+    url('./fonts/Manrope-Medium.ttf') format('ttf'),
+    url('./fonts/Manrope-Regular.ttf') format('ttf'),
+    url('./fonts/Manrope-SemiBold.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+}
