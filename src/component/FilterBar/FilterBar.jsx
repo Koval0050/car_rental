@@ -1,5 +1,5 @@
 import { FilterBarContainer } from "./FilterBar.styled";
-import { ReactComponent as Dolar } from "../../icon/dolar.svg";
+// import { ReactComponent as Dolar } from "../../icon/dolar.svg";
 import DropListBrand from "./DropList/DropListBrand";
 const FilterBar = (params) => {
   return (

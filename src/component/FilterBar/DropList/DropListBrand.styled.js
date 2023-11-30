@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Arrow from "../../../icon/arrow.svg";
+// import Arrow from "../../../icon/arrow.svg";
 export const DropListBrandStyle = styled.div`
   position: relative;
   width: ${(props) => props.w};
