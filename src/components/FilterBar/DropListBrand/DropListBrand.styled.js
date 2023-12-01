@@ -6,9 +6,8 @@ export const DropListBrandStyle = styled.div`
   border: 1px solid rgba(247, 247, 251, 1);
   background-color: rgba(247, 247, 251, 1);
   border-radius: 14px;
-
   padding: 14px 18px;
-  font-family: "Manrope";
+  font-family: 'Manrope';
 
   .hida {
     font-weight: 500;
@@ -26,6 +25,8 @@ export const DropListBrandStyle = styled.div`
 
   .select {
     position: absolute;
+    overflow: auto;
+
     top: 50%;
     left: 50%;
     transform: translate(-50%, 10%);
@@ -45,6 +46,8 @@ export const DropListBrandStyle = styled.div`
     row-gap: 8px;
   }
   .selectItemButton {
+    width: 100%;
+    text-align: start;
     border-color: transparent;
     background-color: transparent;
     font-weight: 500;

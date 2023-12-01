@@ -25,7 +25,12 @@ const carsSlice = createSlice({
       .addCase(fetchCarsDetailAsync.pending, setLoading)
       .addCase(fetchCarsDetailAsync.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.items = action.payload;
+        // Перевірка наявності ідентичних записів у списку перед додаванням нових
+        const newItems = action.payload.filter(
+          newItem =>
+            !state.items.some(existingItem => existingItem.id === newItem.id)
+        );
+        state.items = state.items.concat(newItems);
       })
       .addCase(fetchCarsDetailAsync.rejected, setError);
   },

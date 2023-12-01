@@ -6,11 +6,10 @@ const baseURL =
 
 export const fetchCarsDetailAsync = createAsyncThunk(
   'cars/fetchCarsDetail',
-  async (page = 1, limit = 12) => {
-    const url = baseURL + `?page=${page}&limit=${limit}`;
+  async (page = 1) => {
+    const url = baseURL + `?page=${page}&limit=12`;
     try {
       const response = await axios.get(url);
-      console.log('Response:', response);
       return response.data;
     } catch (error) {
       console.error('Error fetching car details:', error);

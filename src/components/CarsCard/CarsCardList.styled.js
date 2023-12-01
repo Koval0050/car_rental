@@ -6,6 +6,7 @@ export const CarsCardListStyle = styled.ul`
   flex-wrap: wrap;
   row-gap: 50px;
   column-gap: 29px;
+  margin-bottom: 100px;
 
   .listItem {
     position: relative;

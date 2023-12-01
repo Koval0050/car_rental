@@ -9,6 +9,8 @@
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.2",
+    "fs": "^0.0.1-security",
+    "fs.promises": "^0.1.2",
     "nanoid": "^4.0.2",
     "notiflix": "^3.2.6",
     "react": "^18.1.0",
