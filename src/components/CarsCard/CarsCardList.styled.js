@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const CarsCardListStyle = styled.ul`
   list-style: none;
@@ -26,6 +26,7 @@ export const CarsCardListStyle = styled.ul`
   .carImg {
     display: block;
     width: 274px;
+    height: 268px;
     border-radius: 14px;
   }
   .carDiscribe {
@@ -48,4 +49,5 @@ export const CarsCardListStyle = styled.ul`
     line-height: calc(18 / 12);
     color: rgba(18, 20, 23, 0.5);
   }
+
 `;

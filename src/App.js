@@ -1,7 +1,8 @@
+import './style.css'; 
+
 import React, { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import './style.css';
 
 const HeaderLayout = lazy(() =>
   import('./components/SharedLayout/HeaderLayout')
@@ -19,9 +20,9 @@ function App() {
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<HeaderLayout />}>
-            <Route index element={<Home />} />
-            <Route path="/catalog" element={<Catalog />} />
-            <Route path="/favorite" element={<Favorite />} />
+            <Route index element={<Home key="home" />} />
+            <Route path="/catalog" element={<Catalog key="catalog" />} />
+            <Route path="/favorite" element={<Favorite key="favorite" />} />
           </Route>
         </Routes>
       </Suspense>
