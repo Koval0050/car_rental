@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { DropListBrandStyle } from './DropListBrand.styled';
 import { ReactComponent as Arrow } from 'icon/arrow.svg';
 
