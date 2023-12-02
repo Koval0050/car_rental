@@ -12,17 +12,23 @@ const StyledLink = styled(NavLink)`
   text-decoration: none;
   color: black;
   font-weight: 500;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    color: white;
+    background-color: #3470ff;
+  }
 
   &.active {
     color: white;
-    background-color: orangered;
+    background-color: #3470ff;
   }
 `;
 
 const HeaderLayout = () => {
   return (
     <Container>
-      <div>
+      <div className='header'>
         <StyledLink to="/">Home</StyledLink>
         <StyledLink to="/catalog">Catalog</StyledLink>
         <StyledLink to="/favorite">Favorite</StyledLink>

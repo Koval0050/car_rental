@@ -7,7 +7,6 @@ export const FilterBarContainer = styled.div`
   align-items: center;
   column-gap: 18px;
   margin-bottom: 50px;
-  margin-top: 150px;
 
   -moz-appearance: none; /* Firefox */
   -webkit-appearance: none; /* Safari and Chrome */

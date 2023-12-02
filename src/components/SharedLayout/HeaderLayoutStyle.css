@@ -1,0 +1,10 @@
+.header{
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    border: 1px solid #1543ae;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 14px;
+}

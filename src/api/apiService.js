@@ -6,8 +6,8 @@ const baseURL =
 
 export const fetchCarsDetailAsync = createAsyncThunk(
   'cars/fetchCarsDetail',
-  async (page = 1) => {
-    const url = baseURL + `?page=${page}&limit=12`;
+  async ({ page = 1, limitP = 12 }) => {
+    const url = baseURL + `?page=${page}&limit=${limitP}`;
     try {
       const response = await axios.get(url);
       return response.data;

@@ -1,33 +1,11 @@
 import React, { useState } from 'react';
 import { DropListBrandStyle } from './DropListBrand.styled';
 import { ReactComponent as Arrow } from 'icon/arrow.svg';
+import { brands } from 'api/brands';
 
 const DropListBrand = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState('');
-  const brands = [
-    'Buick',
-    'Volvo',
-    'HUMMER',
-    'Subaru',
-    'Mitsubishi',
-    'Nissan',
-    'Lincoln',
-    'GMC',
-    'Hyundai',
-    'MINI',
-    'Bentley',
-    'Mercedes-Benz',
-    'Aston Martin',
-    'Pontiac',
-    'Lamborghini',
-    'Audi',
-    'BMW',
-    'Chevrolet',
-    'Chrysler',
-    'Kia',
-    'Land',
-  ];
 
   const handleDropdownClick = () => {
     setIsOpen(!isOpen);

@@ -20,7 +20,9 @@ export const CarsCardListStyle = styled.ul`
     border: 1px solid transparent;
     fill: #fff;
   }
-
+  .heart:hover {
+    cursor: pointer;
+  }
   .heart.active {
     fill: rgba(52, 112, 255, 1);
   }
@@ -50,5 +52,4 @@ export const CarsCardListStyle = styled.ul`
     line-height: calc(18 / 12);
     color: rgba(18, 20, 23, 0.5);
   }
-
 `;
