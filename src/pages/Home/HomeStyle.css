@@ -27,8 +27,8 @@
   line-height: calc(20 / 18);
   text-transform: capitalize;
   text-align: end;
-font-style: italic;
+  font-style: italic;
 }
-.homeBtn{
-    margin-left: auto;
+.homeBtn {
+  margin-left: auto;
 }

@@ -55,7 +55,6 @@
 .tagsWraper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
   align-items: center;
 
   column-gap: 5px;
