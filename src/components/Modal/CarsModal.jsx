@@ -1,7 +1,7 @@
 import './CarsModalStyle.css';
 import { Button } from 'components/common/Button/Button.styled';
 import { ReactComponent as CloseBtn } from 'icon/closeBtn.svg';
-import { useEffect } from 'react';
+import { useCallback, useEffect } from 'react';
 import { nanoid } from 'nanoid';
 
 const CarsModal = ({ modalToggle, car }) => {
@@ -17,14 +17,11 @@ const CarsModal = ({ modalToggle, car }) => {
     }
   };
 
-const handleKeyDown = useCallback(
-  e => {
-    if (e.key === 'Escape') {
-      modalToggle();
-    }
-  },
-  [modalToggle]
-);
+const handleKeyDown = useCallback((e) => {
+  if (e.key === 'Escape') {
+    modalToggle();
+  }
+}, [modalToggle]);
 
 useEffect(() => {
   window.addEventListener('keydown', handleKeyDown);
