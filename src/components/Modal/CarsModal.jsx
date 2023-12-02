@@ -29,7 +29,7 @@ const CarsModal = ({ modalToggle, car }) => {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [modalToggle]);
+  }, [modalToggle, handleKeyDown]);
 
   // Generate keys outside the render method
   const generateKeys = () => {
