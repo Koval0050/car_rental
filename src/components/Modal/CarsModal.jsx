@@ -17,19 +17,23 @@ const CarsModal = ({ modalToggle, car }) => {
     }
   };
 
-useEffect(() => {
-  const handleKeyDown = e => {
+const handleKeyDown = useCallback(
+  e => {
     if (e.key === 'Escape') {
       modalToggle();
     }
-  };
+  },
+  [modalToggle]
+);
 
+useEffect(() => {
   window.addEventListener('keydown', handleKeyDown);
 
   return () => {
     window.removeEventListener('keydown', handleKeyDown);
   };
-}, [modalToggle]);
+}, [handleKeyDown]);
+
 
   // Generate keys outside the render method
   const generateKeys = () => {
