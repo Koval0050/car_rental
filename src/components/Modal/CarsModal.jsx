@@ -67,7 +67,7 @@ const CarsModal = ({ modalToggle, car }) => {
         <div className="generalInformation">
           <p className="modalCarName">
             {car.make}
-            <span className="modelBuleText">{parametr.model}</span>,{car.year}
+            <span className="modelBuleText">{car.model}</span>,{car.year}
           </p>
           <p className="modalCarTags address">{car.address}</p>
           <p className="modalText">{car.description}</p>
