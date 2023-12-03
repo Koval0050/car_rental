@@ -2,7 +2,9 @@ import './CarsModalStyle.css';
 import { Button } from 'components/common/Button/Button.styled';
 import { ReactComponent as CloseBtn } from 'icon/closeBtn.svg';
 import { useCallback, useEffect } from 'react';
+
 import { nanoid } from 'nanoid';
+import Notiflix from 'notiflix';
 
 const CarsModal = ({ modalToggle, car }) => {
   const conditionsItem = car.rentalConditions.split('\n');
@@ -17,20 +19,22 @@ const CarsModal = ({ modalToggle, car }) => {
     }
   };
 
-const handleKeyDown = useCallback((e) => {
-  if (e.key === 'Escape') {
-    modalToggle();
-  }
-}, [modalToggle]);
+  const handleKeyDown = useCallback(
+    e => {
+      if (e.key === 'Escape') {
+        modalToggle();
+      }
+    },
+    [modalToggle]
+  );
 
-useEffect(() => {
-  window.addEventListener('keydown', handleKeyDown);
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyDown);
 
-  return () => {
-    window.removeEventListener('keydown', handleKeyDown);
-  };
-}, [handleKeyDown]);
-
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [handleKeyDown]);
 
   // Generate keys outside the render method
   const generateKeys = () => {
@@ -59,7 +63,7 @@ useEffect(() => {
         >
           <CloseBtn />
         </button>
-        <img className="modalImg" src={car.img} alt="" />
+        <img className="modalImg" src={car.img} alt={car.make} />
         <div className="generalInformation">
           <p className="modalCarName">
             {car.make},{car.year}
@@ -110,7 +114,17 @@ useEffect(() => {
             </li>
           </ul>
         </div>
-        <Button w={'168px'}>Rental car</Button>
+        <Button
+          w={'168px'}
+          onClick={() => {
+            Notiflix.Notify.success(
+              'Thank you for your order, our manager will contact you in a few minutes'
+            );
+            modalToggle();
+          }}
+        >
+          Rental car
+        </Button>
       </div>
     </div>
   );

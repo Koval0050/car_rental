@@ -19,7 +19,7 @@ const Home = () => {
       <div className="homeListWraper">
         <ul className="homeList">
           <li className="homeListItem">
-            Start Your Journey – Rent, Explore, Dream
+            Start Your Journey – Rent, Explore, Dream.
           </li>
           <li className="homeListItem">
             Dream Big, Explore More – Rent with Confidence.
@@ -28,7 +28,7 @@ const Home = () => {
             Seamless Adventures Await – Rent, Roam, Return.
           </li>
         </ul>
-        <Button onClick={handleButtonClick} className="homeBtn" w={'250px'}>
+        <Button onClick={handleButtonClick} className="homeBtn">
           Go to Rent!
         </Button>
       </div>

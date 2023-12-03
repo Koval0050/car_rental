@@ -1,18 +1,25 @@
+// DropListBrand.js
+
 import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { DropListBrandStyle } from './DropListBrand.styled';
 import { ReactComponent as Arrow } from 'icon/arrow.svg';
 import { brands } from 'api/brands';
+import { setSelectedItem, filterItems } from 'redux/reducer'; 
 
 const DropListBrand = () => {
+  const dispatch = useDispatch();
+  const selectedItem = useSelector(state => state.cars.selectedItem);
+
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedItem, setSelectedItem] = useState('');
 
   const handleDropdownClick = () => {
     setIsOpen(!isOpen);
   };
 
   const handleItemSelect = value => {
-    setSelectedItem(value);
+    dispatch(setSelectedItem(value));
+    dispatch(filterItems());
     setIsOpen(false);
   };
 

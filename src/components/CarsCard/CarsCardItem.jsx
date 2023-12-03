@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import { ReactComponent as Heart } from '../../icon/heart.svg';
 import { Button } from '../common/Button/Button.styled';
 
+import Notiflix from 'notiflix';
+
 export const CarsCardListItem = ({ parametr, modalToggle }) => {
   const [favorites, setFavorites] = useState([]);
 
@@ -29,8 +31,10 @@ export const CarsCardListItem = ({ parametr, modalToggle }) => {
 
     if (hasActiveClass) {
       currentElement.classList.remove('active');
+      Notiflix.Notify.warning('The car has been delited from the wish list');
     } else {
       currentElement.classList.add('active');
+      Notiflix.Notify.info('The car has been added to the wish list');
     }
   }
 
@@ -56,7 +60,7 @@ export const CarsCardListItem = ({ parametr, modalToggle }) => {
       >
         <Heart />
       </button>
-      <img className="carImg" src={parametr.img} alt="" />
+      <img className="carImg" src={parametr.img} alt={parametr.make} />
       <div className="carDiscribe">
         <div className="carName">
           <p>
@@ -72,7 +76,13 @@ export const CarsCardListItem = ({ parametr, modalToggle }) => {
           */}
         </div>
       </div>
-      <Button onClick={() => { modalToggle(parametr) }}>Learn more</Button>
+      <Button
+        onClick={() => {
+          modalToggle(parametr);
+        }}
+      >
+        Learn more
+      </Button>
     </li>
   );
 };

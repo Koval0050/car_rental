@@ -6,11 +6,12 @@ import { Button } from 'components/common/Button/Button.styled';
 const FilterBar = params => {
   return (
     <FilterBarContainer>
-      
       <DropListBrand />
       <DropListPrice />
       <CarMileage />
-      <Button w="136px">Search</Button>
+      <Button w="136px" >
+        Search
+      </Button>
     </FilterBarContainer>
   );
 };
