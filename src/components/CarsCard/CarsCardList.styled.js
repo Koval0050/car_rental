@@ -56,4 +56,6 @@ export const CarsCardListStyle = styled.ul`
     color: rgba(52, 112, 255, 1);
     padding-left: 3px;
   }
+
+
 `;
