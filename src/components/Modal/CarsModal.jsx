@@ -66,7 +66,8 @@ const CarsModal = ({ modalToggle, car }) => {
         <img className="modalImg" src={car.img} alt={car.make} />
         <div className="generalInformation">
           <p className="modalCarName">
-            {car.make},{car.year}
+            {car.make}
+            <span className="modelBuleText">{parametr.model}</span>,{car.year}
           </p>
           <p className="modalCarTags address">{car.address}</p>
           <p className="modalText">{car.description}</p>
