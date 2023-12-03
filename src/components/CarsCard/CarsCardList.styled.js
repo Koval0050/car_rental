@@ -52,4 +52,8 @@ export const CarsCardListStyle = styled.ul`
     line-height: calc(18 / 12);
     color: rgba(18, 20, 23, 0.5);
   }
+  .modelBuleText {
+    color: rgba(52, 112, 255, 1);
+    padding-left: 3px;
+  }
 `;

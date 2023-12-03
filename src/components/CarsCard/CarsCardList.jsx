@@ -34,6 +34,7 @@ const CarsCardList = params => {
     <>
       <CarsCardListStyle>
         {renderCars.map(e => {
+          console.log(e);
           return (
             <CarsCardListItem
               key={e.id}

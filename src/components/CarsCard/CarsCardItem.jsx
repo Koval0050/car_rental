@@ -64,16 +64,14 @@ export const CarsCardListItem = ({ parametr, modalToggle }) => {
       <div className="carDiscribe">
         <div className="carName">
           <p>
-            {parametr.make}, {parametr.year}
+            {parametr.make}
+            <span className="modelBuleText">{parametr.model}</span>, {parametr.year}
           </p>
           <p>{parametr.rentalPrice}</p>
         </div>
         <div className="carTags">
           <p>{parametr.rentalConditions}</p>
-          {/* {parametr.functionalities.map(e => {
-            return <p>{e}</p>;
-          })}
-          */}
+      
         </div>
       </div>
       <Button
